@@ -3,8 +3,8 @@ name: Build R3Pbreed
 on: 
   release:
     types: [published]
-  #push:
-   # tags:
+  # push:
+  # tags:
   #  - 'v*'
   #  branches: 
   #    - master
