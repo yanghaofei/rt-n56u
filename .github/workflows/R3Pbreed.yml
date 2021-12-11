@@ -3,9 +3,9 @@ name: Build R3Pbreed
 on: 
   release:
     types: [published]
-  push:
-    tags:
-    - 'v*'
+  #push:
+   # tags:
+  #  - 'v*'
   #  branches: 
   #    - master
   schedule:
