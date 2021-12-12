@@ -107,7 +107,6 @@ jobs:
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v1-release
       if: always()
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
         files: /opt/images/*.trx
         name: R3Pbreed
