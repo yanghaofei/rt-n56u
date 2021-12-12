@@ -9,8 +9,8 @@ on:
     - 'v*'
   #  branches: 
   #    - master
-#  schedule:
-#    - cron: 0 8 * * 5          #定时自动编译
+  schedule:
+    - cron: 0 16 * * *         #定时自动编译
   watch:
     types: [started]            #运行
 
@@ -104,4 +104,11 @@ jobs:
       with:
         name: Padavan-packages
         path: /opt/images
+    - name: Upload binaries to release
+      uses: svenstaro/upload-release-action@v1-release
+      if: always()
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+        files: /opt/images/*.trx
+        name: R3Pbreed
   
