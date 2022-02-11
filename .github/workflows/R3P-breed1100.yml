@@ -9,8 +9,8 @@ on:
     - 'v*'
   #  branches: 
   #    - master
-#  schedule:
-#    - cron: 0 8 * * 5          #定时自动编译
+  schedule:
+    - cron: 0 16 * * *         #定时自动编译
   watch:
     types: [started]            #运行
 
